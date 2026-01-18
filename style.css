@@ -8,28 +8,58 @@ html,body{
     height: 100%;
     width: 100%;
 }
-body{
-    background-color: black;
-}
-#parent{
-    height: 300px;
+#main{
     width: 100%;
-    background-color: #333;
+    height: 100%;
+    background-color: bisque;
+    padding: 30px;
     display: flex;
-    gap: 20px;
-    padding: 10px;
+    gap: 30px;
     flex-wrap: nowrap;
     overflow: auto;
 }
-#parent::-webkit-scrollbar{
-    background-color: lightblue;
+#main::-webkit-scrollbar{
+    background-color: rgb(77, 73, 73);
 }
-#parent::-webkit-scrollbar-thumb{
-    background-color: royalblue;
+#main::-webkit-scrollbar-thumb{
+    background-color: rgb(147, 219, 195);
 }
 .child{
-    height: 200px;
-    width: 200px;
+    width: 140px;
+    height: 180px;
     background-color: white;
+    box-shadow: 7px 7px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     flex-shrink: 0;
+}
+.child img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.child h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+.child p{
+    font-size: 8px;
+    font-weight: 400;
+    color: #888;
+    text-align: center;
+}
+.child button{
+    padding: 4px 8px;
+    border-radius: 5px;
+    background-color: rgba(138, 234, 234, 0.783);
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: rgba(138, 234, 234, 0.783);
+    border: 2px solid rgba(138, 234, 234, 0.783);
 }
