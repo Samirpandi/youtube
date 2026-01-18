@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+}
+#parent{
+    height: 300px;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+#parent::-webkit-scrollbar{
+    background-color: lightblue;
+}
+#parent::-webkit-scrollbar-thumb{
+    background-color: royalblue;
+}
+.child{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    flex-shrink: 0;
+}
