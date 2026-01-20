@@ -2,64 +2,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'helvetica neue';
+    color: white;
 }
 html,body{
     height: 100%;
     width: 100%;
 }
-#main{
+main{
     width: 100%;
     height: 100%;
-    background-color: bisque;
-    padding: 30px;
-    display: flex;
-    gap: 30px;
-    flex-wrap: nowrap;
-    overflow: auto;
+    background-color: black;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "java buttom-top header"
+                          "java buttom-down marco"
+                           "footer footer marco";
 }
-#main::-webkit-scrollbar{
-    background-color: rgb(77, 73, 73);
+header{
+    background-color: darkgrey;
+    grid-area: header;
 }
-#main::-webkit-scrollbar-thumb{
-    background-color: rgb(147, 219, 195);
+#java{
+    background-color: darkblue;
+    grid-area: java;
 }
-.child{
-    width: 140px;
-    height: 180px;
-    background-color: white;
-    box-shadow: 7px 7px 10px black;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-shrink: 0;
+#buttom-top{
+    background-color: darkmagenta;
+    grid-area: buttom-top;
 }
-.child img{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
+#buttom-down{
+    background-color: darksalmon;
+    grid-area: buttom-down;
 }
-.child h3{
-    font-size: 15px;
-    font-weight: 700;
+#marco{
+    background-color: darkred;
+    grid-area: marco;
 }
-.child p{
-    font-size: 8px;
-    font-weight: 400;
-    color: #888;
-    text-align: center;
-}
-.child button{
-    padding: 4px 8px;
-    border-radius: 5px;
-    background-color: rgba(138, 234, 234, 0.783);
-    color: white;
-    cursor: pointer;
-}
-button:hover{
-    background-color: white;
-    color: rgba(138, 234, 234, 0.783);
-    border: 2px solid rgba(138, 234, 234, 0.783);
+footer{
+    background-color: darkolivegreen;
+    grid-area: footer;
 }
