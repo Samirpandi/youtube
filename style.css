@@ -1,108 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html,body{
-    width: 100%;
-    height: 100%;
+
+html, body {
+  width: 100%;
+  height: 100%;
 }
-main{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    display: grid;
-    cursor: pointer;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 200px 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "top-left top-center top-right"
-                          "top-left center bottom-right"
-                          "bottom-left bottom-left bottom-right";
-                          overflow: hidden;
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
-#top-left{
-    background-color: yellow;
-    grid-area: top-left;
-    overflow: hidden;
+main section {
+  height: 100%;
+  flex-grow: 1;
+  background-position: center;
+  background-size: cover;
 }
-#bottom-left{
-    background: linear-gradient(blue,red,black);
-    grid-area: bottom-left;
-    padding: 50px;
+main section:nth-chlid(1) {
+  background-image: url(https://english.cdn.zeenews.com/sites/default/files/2023/04/12/1182381-gallerydhoni.jpg);
 }
-#top-center{
-    background-color: darkblue;
-    grid-area: top-center;
-    overflow: hidden;
+main section:nth-chlid(2) {
+  background-image: url(https://i.pinimg.com/736x/d3/25/7f/d3257f673f81112393027576e1b5d8fa.jpg);
 }
-#center{
-  background: linear-gradient(red,black);
-  grid-area: center;
-  overflow: hidden;
+main section:nth-chlid(3) {
+  background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202312/rohit-sharma-150912105-16x9_0.jpg?VersionId=YcRv3AVV0gk_E3FyT.pGoTXXJsp1YkQP);
 }
-#top-right{
-    background-color: aquamarine;
-    grid-area: top-right;
-    overflow: hidden;
+main section:nth-chlid(4) {
+  background-image: url(https://wallpapercave.com/wp/wp8126952.jpg);
 }
-#bottom-right{
-    background-color: orange;
-    grid-area: bottom-right;
-    overflow: hidden;
-}
-#top-left img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    transition: all ease 0.8s;
-}
-#center img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all ease 0.8s;
-}
-#top-right img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all ease 0.8s;
-}
-#bottom-right img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all ease 0.8s;
-}
-#top-center img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all ease 0.8s;
-}
-#bottom-left h1{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    transition: all ease 0.8s;
-}
-#top-left:hover img{
-    scale: 1.2;
-}
-#bottom-right:hover img{
-    scale: 1.2;
-}
-#center:hover img{
-    scale: 1.2;
-}
-#top-center:hover img{
-    scale: 1.2;
-}
-#top-right:hover img{
-    scale: 1.2;
-}
-#bottom-left:hover h1{
-    scale: 1.2;
-}
+main section:nth-chlid(5) {
+  background-image: url(https://thethoughtoftheday.com/admin/uploads/articleimage/1711301710_hardik-pandya4.jpg);
+}/*# sourceMappingURL=style.css.map */
